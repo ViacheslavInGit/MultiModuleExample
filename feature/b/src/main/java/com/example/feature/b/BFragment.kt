@@ -3,6 +3,8 @@ package com.example.feature.b
 import android.os.Bundle
 import android.view.View
 import com.example.core.BaseFragment
+import com.example.core.Destination
+import com.example.core.DestinationNavigator
 import com.example.feature.b.databinding.FragmentBBinding
 
 class BFragment : BaseFragment<FragmentBBinding>(R.layout.fragment_b) {
@@ -11,7 +13,7 @@ class BFragment : BaseFragment<FragmentBBinding>(R.layout.fragment_b) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.toB2Button.setOnClickListener {
-            // TODO: 13.01.2021 navigate to b2 
+            (requireActivity() as DestinationNavigator).navigateTo(Destination.B2)
         }
     }
 }

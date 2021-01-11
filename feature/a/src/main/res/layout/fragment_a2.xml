@@ -2,13 +2,10 @@
 <layout>
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/tvValue"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="A2"
-        android:textSize="25sp"
-        tools:ignore="HardcodedText" />
+        android:textSize="25sp" />
 
 </layout>
