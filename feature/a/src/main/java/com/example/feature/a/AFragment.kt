@@ -11,7 +11,7 @@ class AFragment : BaseFragment<FragmentABinding>(R.layout.fragment_a) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.toA2Button.setOnClickListener {
-            // TODO: 13.01.2021 navigate to a2
+            router.navigateTo(screensProvider.getA2Screen(getMessage()))
         }
     }
 

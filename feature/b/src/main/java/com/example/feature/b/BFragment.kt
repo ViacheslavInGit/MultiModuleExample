@@ -11,7 +11,12 @@ class BFragment : BaseFragment<FragmentBBinding>(R.layout.fragment_b) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.toB2Button.setOnClickListener {
-            // TODO: 13.01.2021 navigate to b2 
+            router.navigateTo(screensProvider.getB2Screen())
         }
+    }
+
+    companion object {
+
+        fun newInstance(): BFragment = BFragment()
     }
 }

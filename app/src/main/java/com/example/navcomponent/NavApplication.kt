@@ -1,6 +1,7 @@
 package com.example.navcomponent
 
 import android.app.Application
+import com.example.navcomponent.di.NavigationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -17,7 +18,9 @@ class NavApplication : Application() {
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@NavApplication)
-
+            modules(
+                NavigationModule.module,
+            )
         }
     }
 }
