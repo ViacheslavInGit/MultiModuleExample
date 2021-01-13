@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/b"
+    app:startDestination="@id/mainFragment">
+
+    <include app:graph="@navigation/nav_graph_a" />
+
+    <include app:graph="@navigation/nav_graph_b" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.core.ui.MainFragment"
+        android:label="MainFragment" />
+
+    <action
+        android:id="@+id/action_to_a"
+        app:destination="@id/nav_graph_a"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/mainFragment" />
+
+    <action
+        android:id="@+id/action_to_b"
+        app:destination="@id/nav_graph_b"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/mainFragment" />
+
+</navigation>

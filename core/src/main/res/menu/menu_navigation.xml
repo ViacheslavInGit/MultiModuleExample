@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/fragmentA"
+        android:id="@+id/aFragment"
         android:title="A"
         tools:ignore="HardcodedText" />
 
