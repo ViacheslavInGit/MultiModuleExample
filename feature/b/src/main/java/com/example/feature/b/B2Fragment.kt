@@ -11,9 +11,14 @@ class B2Fragment : BaseFragment<FragmentB2Binding>(R.layout.fragment_b2) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.toA2Button.setOnClickListener {
-            // TODO: 13.01.2021  navigate to a2
+            router.navigateTo(screensProvider.getA2Screen(getMessage()))
         }
     }
 
     private fun getMessage() = "hi from B"
+
+    companion object {
+
+        fun newInstance(): B2Fragment = B2Fragment()
+    }
 }
